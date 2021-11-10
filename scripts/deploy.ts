@@ -13,11 +13,18 @@ async function main() {
   // manually to make sure everything is compiled
   // await hre.run('compile');
 
-  const { deployer } = await getNamedAccounts();
+  const { boss, kingsley, artist, developer } = await getNamedAccounts();
 
   // We get the contract to deploy
   const HappyApe = await ethers.getContractFactory("HappyApe");
-  const happyApe = await HappyApe.deploy([deployer],[1]);
+  const happyApe = await HappyApe.deploy(
+    [
+      boss, kingsley, artist, developer
+    ]
+    ,
+    [
+      85,   5,        5,      5
+    ]);
 
   await happyApe.deployed();
 

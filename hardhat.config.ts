@@ -52,6 +52,10 @@ const config: HardhatUserConfig = {
   },
   namedAccounts: {
     deployer: 0,
+    boss: 1,
+    kingsley: 2,
+    artist: 3,
+    developer: 4
   },
   gasReporter: {
     enabled: process.env.REPORT_GAS !== undefined,
