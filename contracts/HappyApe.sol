@@ -27,7 +27,6 @@ contract HappyApe is ERC721Enumerable, PaymentSplitter, Ownable {
     uint32 private constant REVEAL_TIMESTAMP = 1636524632;          // TODO
     uint16 private constant EACH_MAX_POPULATION = 10;               // TODO
     uint256 private constant APE_BIRTH_COST = 0.09 ether;
-    address private constant VOUCHER_SIGNER = 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266;
 
     ///@dev Setup ERC721 and PaymentSplitter
     constructor(
